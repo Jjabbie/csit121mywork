@@ -1,0 +1,39 @@
+/* Styling the body */
+body {
+    background-color: white;
+    color: blue;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling headings */
+h1, h2, h3 {
+    color: red;
+}
+
+/* Styling paragraphs */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Styling links */
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ID selector */
+#main-content {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Class selector */
+.highlight {
+    background-color: yellow;
+    padding: 5px;
+}
