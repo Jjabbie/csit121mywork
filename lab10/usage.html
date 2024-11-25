@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How to use the Web Authentication API - Level 2">
+    <title>How to Use Web Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Using the Web Authentication API</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="importance.html">Importance</a></li>
+                <li><a href="usage.html">How It's Used</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Overview of Usage</h2>
+            <p>
+                The Web Authentication API enables developers to integrate secure authentication mechanisms into web applications. By using WebAuthn, websites can allow users to log in with biometric data, hardware keys, or device-bound credentials. This API leverages modern browser capabilities and secure authentication protocols, such as Public Key Cryptography.
+            </p>
+        </section>
+        <section>
+            <h2>JavaScript Integration Example</h2>
+            <p>
+                To use WebAuthn in a web application, developers can interact with the API using JavaScript. For instance, registering a new credential involves calling the `navigator.credentials.create()` method, while authenticating requires `navigator.credentials.get()`. These methods handle complex security protocols, making the implementation straightforward for developers.
+            </p>
+        </section>
+        <section>
+            <h2>Practical Application</h2>
+            <p>
+                A typical use case for WebAuthn is enabling two-factor or passwordless authentication for an e-commerce site. Users can register their fingerprint or a hardware security key during account creation and use it to authenticate themselves during login. This method ensures secure access without the need for passwords.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jakuba Jabbie. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
