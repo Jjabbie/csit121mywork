@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+  color: yellow;
+}
+
+h1, h2, h3 {
+  color: purple;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: blueviolet;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#main-header {
+  background-color: Green;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.highlight {
+  font-style: oblique;
+  text-shadow: 1px 1px 2px green;
+}
