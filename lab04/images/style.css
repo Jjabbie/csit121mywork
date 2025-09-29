@@ -1,0 +1,58 @@
+/* General body styling */
+body {
+  background-color: black;
+  color: yellow;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  color: purple;
+  text-align: center;
+}
+
+p {
+  margin: 1em auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: green;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Images: prevent full screen, center them */
+img {
+  max-width: 500px;   /* limit width */
+  width: 100%;        /* responsive scaling */
+  height: auto;       /* keep aspect ratio */
+  display: block;
+  margin: 20px auto;  /* center horizontally with spacing */
+  border: 3px solid purple;
+  border-radius: 10px;
+}
