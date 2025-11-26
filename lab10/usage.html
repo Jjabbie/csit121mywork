@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab10 — Using DIDs (Examples)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="container">
+    <header class="site-header" role="banner">
+      <h1 class="brand">Lab10: Decentralized Identifiers (DIDs)</h1>
+      <nav class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">What is it?</a></li>
+          <li><a href="importance.html">Why important?</a></li>
+          <li><a href="usage.html">How used (examples)</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="card" role="main" aria-labelledby="how-title">
+      <h2 id="how-title">How DIDs are Used — Examples</h2>
+
+      <section aria-labelledby="example-1">
+        <h3 id="example-1">Example 1: Verifiable Credentials</h3>
+        <p>Organizations issue verifiable credentials (e.g., diplomas) tied to a DID. The subject controls the DID and can present proofs to verifiers without exposing unnecessary personal data.</p>
+
+        <div class="example" aria-live="polite">
+          <strong>Issuance flow (simple):</strong>
+          <ol>
+            <li>Issuer creates credential and signs it.</li>
+            <li>Credential is associated with the subject's DID.</li>
+            <li>Holder presents the credential to a verifier, who checks the signature via the DID Document.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="example-2">
+        <h3 id="example-2">Example 2: Authentication with DID Documents</h3>
+        <p>DID Documents store public keys (verification methods). To authenticate, the DID controller signs a challenge; the verifier fetches the DID Document to check the public key and signature.</p>
+
+        <pre><code>// pseudo: verify signature using public key from DID document
+1) Resolve did:example:123 -> did document
+2) Fetch verificationMethod.publicKeyMultibase
+3) Use public key to verify signature on challenge
+</code></pre>
+      </section>
+
+      <section aria-labelledby="example-3">
+        <h3 id="example-3">Example 3: DID Methods & Resolution</h3>
+        <p>A DID method defines how DIDs are created, resolved, and updated (e.g., did:key, did:web, did:ion). A DID resolver tool takes a DID and returns a conforming DID Document.</p>
+
+        <table>
+          <caption>Example DID methods</caption>
+          <thead>
+            <tr><th>Method</th><th>Common use</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>did:web</td><td>Web-hosted DID documents (useful for websites)</td></tr>
+            <tr><td>did:key</td><td>Local key-only identifiers (quick setup)</td></tr>
+            <tr><td>did:ion</td><td>Layer-2 DID method built on top of Bitcoin</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>Examples adapted from W3C DID Core & DID Use Cases</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lab10 — What is a DID?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="container">
+    <header class="site-header" role="banner">
+      <h1 class="brand">Lab10: Decentralized Identifiers (DIDs)</h1>
+      <nav class="site-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">What is it?</a></li>
+          <li><a href="importance.html">Why important?</a></li>
+          <li><a href="usage.html">How used (examples)</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="card" role="main" tabindex="-1" aria-labelledby="what-title">
+      <h2 id="what-title">What is a Decentralized Identifier (DID)?</h2>
+
+      <p class="lead">A <strong>DID</strong> is a new type of identifier (a URI) that enables verifiable, decentralized digital identity. Unlike traditional identifiers (email, usernames, government IDs), DIDs are designed so their controllers can prove control without relying on a centralized authority.</p>
+
+      <section aria-labelledby="did-syntax">
+        <h3 id="did-syntax">DID structure (simple)</h3>
+        <p>At a high level, a DID is a text string with three main parts: the DID scheme (<code>did:</code>), the DID method name, and the method-specific identifier.</p>
+
+        <div class="example" aria-live="polite">
+          <strong>Example DID</strong>
+          <pre><code>did:example:123456789abcdefghi</code></pre>
+        </div>
+
+        <h3 id="did-docs">DID Document (what it contains)</h3>
+        <p>A DID resolves to a DID Document that may include public keys, verification methods, and service endpoints that allow others to interact with the DID subject securely.</p>
+
+        <div class="example" aria-live="polite">
+          <strong>Example DID Document (JSON)</strong>
+          <pre><code>{
+  "@context": ["https://www.w3.org/ns/did/v1"],
+  "id": "did:example:123456789abcdefghi",
+  "authentication": [{
+    "id": "did:example:123456789abcdefghi#keys-1",
+    "type": "Ed25519VerificationKey2020",
+    "controller": "did:example:123456789abcdefghi",
+    "publicKeyMultibase": "zH3C2AVv..."
+  }]
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>Created by Jakuba Jabbie — CSIT121 Lab10</p>
+    </footer>
+  </div>
+</body>
+</html>
